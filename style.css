@@ -1,0 +1,476 @@
+/* General styling for sections */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* Make sure it stays behind everything */
+  top: 0;
+  left: 0;
+}
+
+body {
+  background: linear-gradient(to right, #2193b0, #99e5f7);
+}
+.bg2 {
+  width: 330px !important;
+  height: 380px !important;
+
+  border: 5px solid #333;
+  border-radius: 50% / 62%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(208, 208, 216);
+}
+
+.Home,
+.About,
+.Skills,
+.Projects,
+.certification,
+.Contacts {
+  padding: 40px 20px;
+  margin: 90px auto;
+  width: 87%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15); /* Transparent white */
+  backdrop-filter: blur(10px); /* Blurred glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+/* Portfolio background */
+.Portfolio_body {
+  background: linear-gradient(to right, #2193b0, #99e5f7);
+  color: #1a1a40;
+  font-family: "Inter", sans-serif;
+}
+.A11 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+}
+.quote {
+  position: relative;
+  padding-left: 25px;
+}
+
+.quote::before {
+  content: "“";
+  font-size: 40px;
+  color: #080808;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.quote::after {
+  content: "”";
+  font-size: 40px;
+  color: #101111;
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  line-height: 1;
+  font-weight: bold;
+}
+💡 
+
+/* Sticky Navbar styling */
+
+
+.nav a {
+  color: rgb(3, 3, 3);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav-link.active {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black !important;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Home section */
+.Home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82vh;
+  padding: 0 50px;
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.content h1 {
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 60px;
+  color: rgb(245, 245, 248);
+}
+
+.content h6 {
+  font-size: 20px;
+  color: rgb(37, 37, 37);
+  opacity: 0.7;
+}
+
+.bg1 {
+  width: 600px;
+}
+
+/* Typewriter effect */
+.typewriter-text {
+  font-size: 20px;
+  color: rgb(37, 37, 37);
+  font-weight: 400;
+}
+
+.typewriter-text::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* About section */
+.About {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(25, 130, 160, 0.2);
+  padding: 10px 20px;
+  z-index: 1;
+  height: 500px;
+}
+
+/* About layout */
+.A1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.A11 {
+  flex: 1;
+  text-align: left;
+}
+
+.A12 {
+  flex: 1;
+  text-align: right;
+}
+
+.A12 img {
+  width: 580px;
+  height: 450px;
+}
+.head1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: bisque;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+/* Hide section when scrolling down */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+.languages,
+.tools {
+  margin-top: 50px;
+  display: flex;
+  align-items: center; /* Centers the heading with images */
+  gap: 30px; /* Space between heading and images */
+}
+
+.languages .item,
+.tools .item {
+  display: flex;
+  align-items: center; /* Aligns heading to middle of images */
+  gap: 30px; /* Space between heading and images */
+}
+
+.languages h4,
+.tools h4 {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from breaking */
+  color: antiquewhite;
+  min-width: 120px; /* Set a fixed minimum width to align both headings */
+  text-align: left;
+}
+
+.languages .item ul,
+.tools .item ul {
+  display: flex;
+  flex-wrap: wrap; /* Wraps elements if they don’t fit */
+  justify-content: center;
+  gap: 30px; /* Space between items */
+  padding: 0; /* Remove unnecessary padding */
+  list-style: none;
+}
+
+.languages .item ul li,
+.tools .item ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px; /* Space between image and text */
+}
+.head4 {
+  gap: 80px;
+}
+.languages .item ul li img,
+.tools .item ul li img {
+  border-radius: 10px;
+  width: 100px; /* Adjusts image size for consistency */
+  height: 100px;
+  object-fit: contain; /* Prevents distortion */
+}
+
+.languages .item ul li p,
+.tools .item ul li p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+/* -------------------------------------------Prohect----------------------------------------------------- */
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 80vh;
+  position: relative;
+}
+#selected-project-container {
+  position: relative;
+  margin-top: 33px; /* Remove this */
+}
+
+#selected-project-container.scrollable {
+  height: 400px;
+  overflow-y: auto;
+  width: 67%;
+}
+.tople {
+  padding-top: -3px;
+  margin-top: -65px;
+  width: 900px;
+}
+
+#selected-project-container.scrollable::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.head1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  display: flex;
+
+  transition: all 0.3s ease;
+  height: 290px;
+}
+.Projects {
+  height: 100px;
+}
+.card {
+  margin-top: 40px;
+  width: 330px;
+  height: 300px; /* Increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: linear-gradient(to right, #8fe1fa, #a3d7e2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1),
+    0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+}
+
+.cardimg {
+  width: 300px;
+  height: 260px;
+}
+
+.subhead {
+  margin-top: 8px;
+  color: beige;
+  font-size: 22px;
+}
+
+.btns {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  background: #2193b0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.btns:hover {
+  background: #176d80;
+  transform: scale(1.05);
+}
+.selected-project-container {
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+  margin-top: 98px;
+}
+
+.selected-card {
+  top: 0px;
+  width: 250px;
+  height: 340px;
+  padding-left: 120px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.timeline-container {
+  flex: 1;
+  max-width: 750px;
+  margin-top: 80px;
+}
+
+#projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #2193b0;
+  border-radius: 50%;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 2px;
+  height: 20px;
+  background-color: #2193b0;
+}
+
+.project-description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgb(43, 31, 31);
+  font-weight: 100;
+  font-weight: 400;
+}
+
+.Contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.imagsbg {
+  width: 280px;
+  height: 300px;
+}
+
+.Contacts ul {
+  list-style-type: none;
+}
+
+.Contacts li {
+  margin: 10px 0;
+}
+
+.Contacts a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+.iconss {
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+}
