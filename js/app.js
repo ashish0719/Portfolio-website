@@ -24,7 +24,8 @@ particlesJS(
         },
       },
       color: {
-        value: "#ffffff",
+        // CHANGED DOT COLOR to black for visibility on light background
+        value: "#000000",
       },
       shape: {
         type: "circle",
@@ -64,7 +65,8 @@ particlesJS(
       line_linked: {
         enable: true,
         distance: 150,
-        color: "#ffffff",
+        // CHANGED LINE COLOR to dark gray (#333333) or black
+        color: "#333333",
         opacity: 0.4,
         width: 1,
       },
@@ -123,7 +125,8 @@ particlesJS(
     retina_detect: true,
     config_demo: {
       hide_card: false,
-      background_color: "#b61924",
+      // Keeping this as "transparent" is correct for allowing your CSS background to show through
+      background_color: "transparent",
       background_image: "",
       background_position: "50% 50%",
       background_repeat: "no-repeat",

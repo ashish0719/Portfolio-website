@@ -11,11 +11,22 @@ let charIndex = 0;
 let isDeleting = false;
 
 const navLinks = document.querySelectorAll(".nav-link");
+// NEW: Get the collapsible navbar element
+const navbarCollapse = document.getElementById("navbarNav");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", function () {
     navLinks.forEach((nav) => nav.classList.remove("active")); // Remove active from all
     this.classList.add("active"); // Add to the clicked one
+
+    // NEW LOGIC: Close the mobile menu if it is open (requires Bootstrap JS to be loaded)
+    if (navbarCollapse.classList.contains("show")) {
+      // Use Bootstrap's Collapse utility to hide the menu
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false,
+      });
+      bsCollapse.hide();
+    }
   });
 });
 
@@ -72,10 +83,10 @@ const projectDescriptions = {
     "Built a personal portfolio website with a responsive design to showcase skills, projects, and contact details, focusing on clean UI and frontend practices. HTML | CSS | JavaScript |",
 
   "Weather Website":
-    "Created a weather forecast app that displays real-time weather data based on user input, showcasing API integration and dynamic data rendering. HTML | CSS | JavaScript | Weather API | ",
+    "Created a weather forecast app that displays real-time weather data based on user input, showcasing API integration and dynamic data rendering. HTML | CSS | JavaScript | Weather API | &nbsp &nbsp;<a href='https://weather-forecasting-website-mauve.vercel.app/'>View Project</a> ",
 
   "Quiz App":
-    "Developed an interactive quiz application with multiple-choice questions, score tracking, and dynamic UI updates to enhance user engagement and logic handling. HTML | CSS | JavaScript | DOM Manipulation |",
+    "Developed an interactive quiz application with multiple-choice questions, score tracking, and dynamic UI updates to enhance user engagement and logic handling. HTML | CSS | JavaScript | DOM Manipulation | &nbsp &nbsp;<a href='https://quiz-website-liard.vercel.app/'>View Project</a>",
 
   "Language Translator":
     "Built a web-based language translator that allows users to translate text between multiple languages, highlighting API integration and intuitive UI design. HTML | CSS | JavaScript | Translation API |&nbsp &nbsp;<a href='https://language-translator-faczwj8ry-ashishs-projects-1448cb93.vercel.app/'>View Project</a>",

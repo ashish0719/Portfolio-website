@@ -12,22 +12,27 @@ html {
   left: 0;
 }
 
+/* --- General Body & Background (Minimalist Light Mode) --- */
 body {
-  background: linear-gradient(to right, #2193b0, #99e5f7);
+  /* Soft, light background for a clean, minimal look */
+  background: #f0f2f5;
 }
+
 .bg2 {
   width: 330px !important;
   height: 380px !important;
-
-  border: 5px solid #333;
-  border-radius: 50% / 62%;
+  /* Simplified profile photo container */
+  border: none;
+  border-radius: 12px; /* Square off the shape for professionalism */
+  /* Subtle lift effect */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px #ffffff;
+  background-color: #f0f2f5;
   object-fit: cover;
   display: block;
   margin: 0 auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background-color: rgb(208, 208, 216);
 }
 
+/* --- Main Sections: Neumorphism-Inspired --- */
 .Home,
 .About,
 .Skills,
@@ -37,21 +42,24 @@ body {
   padding: 40px 20px;
   margin: 90px auto;
   width: 87%;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15); /* Transparent white */
-  backdrop-filter: blur(10px); /* Blurred glass effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  border-radius: 20px; /* Softer, larger radius */
+
+  /* The core Neumorphism effect: two subtle shadows */
+  background: #f0f2f5;
+  box-shadow: 8px 8px 16px #cacbcc,
+    /* Dark shadow (bottom-right) */ -8px -8px 16px #ffffff; /* Light highlight (top-left) */
+
+  transition: all 0.4s ease-in-out;
   position: relative;
   z-index: 1;
+  border: none; /* Remove explicit border */
+  backdrop-filter: none; /* Remove blur effect */
 }
 
 /* Portfolio background */
 .Portfolio_body {
-  background: linear-gradient(to right, #2193b0, #99e5f7);
-  color: #1a1a40;
+  background: #f0f2f5;
+  color: #1a1a40; /* Darker text for high contrast */
   font-family: "Inter", sans-serif;
 }
 .A11 {
@@ -61,12 +69,13 @@ body {
 .quote {
   position: relative;
   padding-left: 25px;
+  color: #333; /* Darker text for readability */
 }
 
 .quote::before {
   content: "“";
   font-size: 40px;
-  color: #080808;
+  color: #555; /* Neutral quote marks */
   position: absolute;
   left: 0;
   top: -10px;
@@ -77,7 +86,7 @@ body {
 .quote::after {
   content: "”";
   font-size: 40px;
-  color: #101111;
+  color: #555; /* Neutral quote marks */
   position: absolute;
   right: -10px;
   bottom: -20px;
@@ -86,19 +95,25 @@ body {
 }
 💡 
 
-/* Sticky Navbar styling */
-
+/* --- Sticky Navbar styling --- */
+nav {
+  /* Navbar background blending with the body background */
+  background: #f0f2f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Simple downward shadow */
+}
 
 .nav a {
-  color: rgb(3, 3, 3);
+  color: #1a1a40; /* Dark links */
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .nav-link.active {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: black !important;
-  border-radius: 5px;
+  /* **Recessed Button Look (Inverted Neumorphism)** */
+  background: #e0e2e5;
+  box-shadow: inset 3px 3px 5px #cacbcc, inset -3px -3px 5px #ffffff; /* Inset shadow */
+  color: #2193b0 !important; /* Active link text in accent color */
+  border-radius: 8px;
   font-weight: bold;
 }
 
@@ -121,7 +136,7 @@ body {
   font-style: oblique;
   font-weight: bold;
   font-size: 60px;
-  color: rgb(245, 245, 248);
+  color: #1a1a40; /* Dark color for text */
 }
 
 .content h6 {
@@ -156,7 +171,6 @@ body {
 /* About section */
 .About {
   box-sizing: border-box;
-  box-shadow: 0px 4px 8px rgba(25, 130, 160, 0.2);
   padding: 10px 20px;
   z-index: 1;
   height: 500px;
@@ -188,9 +202,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: bisque;
+  color: #2193b0; /* Use your signature blue as a primary accent */
   font-weight: bold;
   font-size: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* subtle inset text shadow for depth */
+  text-shadow: 1px 1px 1px #ffffff;
 }
 
 /* Hide section when scrolling down */
@@ -219,7 +237,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   white-space: nowrap; /* Prevents text from breaking */
-  color: antiquewhite;
+  color: #1a1a40; /* Dark headings */
   min-width: 120px; /* Set a fixed minimum width to align both headings */
   text-align: left;
 }
@@ -241,6 +259,13 @@ body {
   align-items: center;
   text-align: center;
   gap: 30px; /* Space between image and text */
+  /* **Skill Icon Recessed Button Look** */
+  background: #f0f2f5;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 4px 4px 8px #cacbcc, inset -4px -4px 8px #ffffff; /* Inset Shadow */
+  transition: all 0.3s;
+  cursor: default;
 }
 .head4 {
   gap: 80px;
@@ -253,10 +278,17 @@ body {
   object-fit: contain; /* Prevents distortion */
 }
 
+.languages .item ul li:hover,
+.tools .item ul li:hover {
+  /* Subtle pop-out on hover */
+  box-shadow: 6px 6px 12px #cacbcc, -6px -6px 12px #ffffff;
+  transform: translateY(-2px);
+}
+
 .languages .item ul li p,
 .tools .item ul li p {
   font-size: 14px;
-  color: #333;
+  color: #333; /* Dark text for icon names */
   margin: 0;
 }
 
@@ -272,7 +304,7 @@ body {
 }
 #selected-project-container {
   position: relative;
-  margin-top: 33px; /* Remove this */
+  margin-top: 33px;
 }
 
 #selected-project-container.scrollable {
@@ -297,7 +329,7 @@ body {
   transform: translateX(-50%);
   text-align: center;
   font-size: 28px;
-  color: white;
+  color: #2193b0;
 }
 
 .cards-container {
@@ -315,28 +347,25 @@ body {
   height: 100px;
 }
 .card {
+  /* **Raised Card Look** */
   margin-top: 40px;
   width: 330px;
-  height: 300px; /* Increased height */
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  background: linear-gradient(to right, #8fe1fa, #a3d7e2);
-  backdrop-filter: blur(15px);
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1),
-    0px 4px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #f0f2f5;
+  /* Clear pop-out shadow */
+  box-shadow: 8px 8px 16px #cacbcc, -8px -8px 16px #ffffff;
+  color: #1a1a40;
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px); /* Lift higher on hover */
+  box-shadow: 10px 10px 20px #c0c0c0, -10px -10px 20px #ffffff;
 }
 
 .cardimg {
@@ -346,16 +375,17 @@ body {
 
 .subhead {
   margin-top: 8px;
-  color: beige;
+  color: #2193b0;
   font-size: 22px;
+  font-weight: 600;
 }
 
 .btns {
   display: block;
   margin: auto;
   margin-top: 20px;
-  border-radius: 8px;
-  padding: 12px 24px;
+  border-radius: 50px; /* Pill shape for modernity */
+  padding: 10px 30px;
   border: none;
   background: #2193b0;
   color: white;
@@ -363,6 +393,8 @@ body {
   cursor: pointer;
   transition: 0.3s;
   margin-bottom: 10px;
+  font-weight: bold;
+  box-shadow: 3px 3px 6px #cacbcc, -3px -3px 6px #ffffff;
 }
 
 .btns:hover {
@@ -402,10 +434,13 @@ body {
 .timeline-item {
   position: relative;
   padding-left: 20px;
-
   font-size: 18px;
-  color: white;
+  color: #333;
   font-weight: 400;
+}
+
+.timeline-item h3 {
+  color: #2193b0; /* Accent color for project titles */
 }
 
 .timeline-item::before {
@@ -432,8 +467,7 @@ body {
 .project-description {
   margin-top: 10px;
   font-size: 16px;
-  color: rgb(43, 31, 31);
-  font-weight: 100;
+  color: #555;
   font-weight: 400;
 }
 
@@ -459,7 +493,7 @@ body {
 
 .Contacts a {
   text-decoration: none;
-  color: black;
+  color: #1a1a40; /* Dark link color */
   display: flex;
   align-items: center;
 }
@@ -473,4 +507,382 @@ body {
   width: 30px;
   height: 30px;
   margin-top: 3px;
+}
+
+/* --- Resume/Download Button (CTA) --- */
+.download-btn {
+  background: #2193b0; /* Bright, solid primary accent color */
+  color: white !important;
+  border-radius: 5px;
+  padding: 8px 15px !important;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+  background: #176d80;
+  transform: translateY(-2px);
+}
+/* Hamburger Toggler (must be visible on light background) */
+.navbar-toggler-icon {
+  /* Ensures the hamburger lines are visible dark color */
+  filter: invert(0.2);
+}
+
+/* ------------------------------------------- CERTIFICATIONS ----------------------------------------------------- */
+
+.certification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 80px; /* Give it space at the bottom */
+  height: auto !important; /* Allow content to dictate height */
+}
+
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between cards */
+  width: 100%;
+  margin-top: 40px;
+}
+
+.certification-card {
+  width: 350px; /* Fixed width for consistency */
+  min-height: 400px;
+  background: #f0f2f5;
+  border-radius: 15px;
+  padding: 15px;
+
+  /* Neumorphism Pop-out Effect */
+  box-shadow: 6px 6px 12px #cacbcc, -6px -6px 12px #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 10px 10px 20px #cacbcc, -10px -10px 20px #ffffff;
+}
+
+.cert-img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  /* Recessed look for the image area */
+  background: #e0e2e5;
+  box-shadow: inset 3px 3px 6px #cacbcc, inset -3px -3px 6px #ffffff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.cert-info h3 {
+  color: #2193b0; /* Accent blue for certificate title */
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.cert-info p {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+
+.cert-date {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 15px !important;
+}
+
+.cert-link-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  background: #2193b0; /* Primary accent color */
+  color: white !important;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+
+  /* subtle button shadow */
+  box-shadow: 3px 3px 6px #cacbcc, -3px -3px 6px #ffffff;
+}
+
+.cert-link-btn:hover {
+  background: #176d80;
+  transform: scale(1.05);
+}
+
+/* --- Responsive Adjustments for Certifications --- */
+
+/* Add this to your @media (max-width: 600px) block in style.css */
+/* .certification-card {
+  width: 90%; 
+  max-width: 350px;
+}
+.cert-img {
+  max-height: 150px;
+} */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------- RESPONSIVENESS (Media Queries) -------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Tablet and smaller desktops (Max width 1024px) */
+@media (max-width: 1024px) {
+  /* General Section Sizing */
+  .Home,
+  .About,
+  .Skills,
+  .Projects,
+  .Contacts {
+    width: 95%; /* Use more width on smaller screens */
+    margin: 60px auto;
+    padding: 30px 15px;
+  }
+
+  /* Home Section */
+  .Home {
+    flex-direction: column; /* Stack content and image */
+    text-align: center;
+    height: auto; /* Allow height to adjust */
+    padding-top: 100px; /* Add padding from the top for the fixed navbar */
+    padding-bottom: 30px;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  .content h1 {
+    font-size: 48px;
+  }
+
+  .bg1 {
+    width: 80%; /* Shrink the hero image */
+    max-width: 400px;
+    margin-top: 30px;
+  }
+
+  /* About Section */
+  .About {
+    height: auto;
+  }
+
+  .A1 {
+    flex-direction: column; /* Stack content and image */
+    text-align: center;
+  }
+
+  .A12 {
+    order: -1; /* Move the image above the text on small screens */
+    margin-bottom: 20px;
+  }
+
+  .A12 img {
+    width: 300px; /* Adjust profile image size */
+    height: 350px;
+  }
+
+  .quote {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .quote::before,
+  .quote::after {
+    display: none; /* Hide large quote marks for cleaner look on small screens */
+  }
+
+  /* Skills Section */
+  .languages .item,
+  .tools .item {
+    flex-direction: column; /* Stack heading and list */
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .languages h4,
+  .tools h4 {
+    min-width: unset;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .languages .item ul,
+  .tools .item ul {
+    justify-content: flex-start; /* Align skills to the left */
+  }
+
+  .languages .item ul li img,
+  .tools .item ul li img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Projects Section */
+  .Projects {
+    height: auto;
+  }
+
+  .cards-container {
+    flex-direction: row; /* Keep cards in a row, they will wrap */
+    gap: 20px;
+    height: auto;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 45%; /* Two cards per row */
+    max-width: 300px;
+    height: 280px;
+    margin-top: 20px;
+  }
+
+  /* Selected Project View (Timeline) */
+  #selected-project-container.scrollable {
+    width: 90%;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .tople {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .timeline-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .timeline-item h3 {
+    font-size: 18px;
+  }
+
+  /* Contact Section */
+  .Contacts {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .info ul {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .Contacts .A12 img {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 30px;
+  }
+}
+
+/* Mobile Devices (Max width 991.98px - Bootstrap's 'lg' breakpoint) */
+@media (max-width: 991.98px) {
+  /* Navbar: Hamburger menu specific styles */
+  .Navs .container-fluid {
+    justify-content: space-between !important; /* Keep logo and toggler separate */
+  }
+
+  .navbar-collapse {
+    /* Ensures the dropdown is full width and looks like a menu */
+    width: 100%;
+    text-align: center;
+    background: #f0f2f5; /* Light background for mobile menu */
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .nav-item {
+    margin: 5px 0 !important; /* Adjust margins for stacked links */
+  }
+
+  .nav-link.active {
+    background: #e0e2e5;
+    box-shadow: inset 3px 3px 5px #cacbcc, inset -3px -3px 5px #ffffff;
+  }
+
+  /* Hide GitHub link for a cleaner dropdown, it can be in the Contacts section */
+  .navbar-nav .nav-item:last-child {
+    display: none;
+  }
+
+  /* Make the resume button stand out slightly */
+  .download-btn {
+    font-weight: bold;
+    background-color: #2193b0;
+    border-radius: 5px;
+    color: white !important;
+  }
+}
+
+/* Small Mobile Devices (Max width 600px) */
+@media (max-width: 600px) {
+  /* Home Section */
+  .content h1 {
+    font-size: 38px;
+  }
+
+  .typewriter-text {
+    font-size: 18px;
+  }
+
+  /* Projects Section */
+  .cards-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+    height: 250px;
+  }
+
+  .cardimg {
+    width: 90%;
+    height: 180px;
+  }
+
+  /* Skills Icons */
+  .languages .item ul,
+  .tools .item ul {
+    gap: 15px; /* Reduce gap */
+  }
+
+  .languages .item ul li img,
+  .tools .item ul li img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .languages .item ul li p,
+  .tools .item ul li p {
+    font-size: 12px;
+  }
+
+  /* Contact Section */
+  .info li {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  .info img {
+    width: 40px;
+    height: 40px;
+  }
 }
