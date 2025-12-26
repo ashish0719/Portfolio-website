@@ -60,7 +60,7 @@ const allProjects = [
   {
     id: 1,
     title: "Portfolio Website",
-    img: "Assets/Images/portfolio.png",
+    img: "/Assets/Images/portfolio.png",
     description:
       "Built a personal portfolio website with a responsive design to showcase skills, projects, and contact details, focusing on clean UI and frontend practices.",
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -70,7 +70,7 @@ const allProjects = [
   {
     id: 2,
     title: "The Indian Bawarchi",
-    img: "Assets/Images/IndianBawarchi.png",
+    img: "/Assets/Images/IndianBawarchi.png",
     description:
       "A full-stack food blogging and recipe management website showcasing Indian cuisine, with user authentication, recipe creation, and interactive browsing.",
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
@@ -80,7 +80,7 @@ const allProjects = [
   {
     id: 3,
     title: "Sweet Inventory Management System",
-    img: "Assets/Images/SweetInventory.png",
+    img: "/Assets/Images/SweetInventory.png",
     description:
       "A backend-focused inventory management system for managing sweets, built using Test-Driven Development (TDD) with Jest to ensure reliability, accurate stock tracking, and robust API behavior.",
     techStack: ["Node.js", "Express.js", "MongoDB", "Jest", "TDD"],
@@ -91,7 +91,7 @@ const allProjects = [
   {
     id: 4,
     title: "Weather Website",
-    img: "Assets/Images/Weather.png",
+    img: "/Assets/Images/Weather.png",
     description:
       "Created a weather forecast app that displays real-time weather data based on user input, showcasing API integration and dynamic data rendering.",
     techStack: ["HTML", "CSS", "JavaScript", "Weather API"],
@@ -101,7 +101,7 @@ const allProjects = [
   {
     id: 5,
     title: "Quiz App",
-    img: "Assets/Images/quiz.png",
+    img: "/Assets/Images/quiz.png",
     description:
       "Developed an interactive quiz application with multiple-choice questions, score tracking, and dynamic UI updates to enhance user engagement.",
     techStack: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
@@ -111,12 +111,11 @@ const allProjects = [
   {
     id: 6,
     title: "Language Translator",
-    img: "Assets/Images/language.png",
+    img: "/Assets/Images/language.png",
     description:
       "Built a web-based language translator that allows users to translate text between multiple languages, highlighting API integration and intuitive UI design.",
     techStack: ["HTML", "CSS", "JavaScript", "Translation API"],
-    liveLink:
-      "https://language-translator-faczwj8ry-ashishs-projects-1448cb93.vercel.app/",
+    liveLink: "https://language-translator-murex.vercel.app/",
     category: "WebD",
   },
 ];
