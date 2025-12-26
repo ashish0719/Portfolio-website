@@ -64,7 +64,7 @@ const allProjects = [
     description:
       "Built a personal portfolio website with a responsive design to showcase skills, projects, and contact details, focusing on clean UI and frontend practices.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    liveLink: "https://portfolio-website-psi-three-31.vercel.app/",
+    liveLink: "https://portfolio-website-xi-weld.vercel.app/",
     category: "WebD",
   },
   {
@@ -80,7 +80,7 @@ const allProjects = [
   {
     id: 3,
     title: "Sweet Inventory Management System",
-    img: "/Assets/Images/SweetInventory.png",
+    img: "/Assets/Images/SweetInventory.PNG",
     description:
       "A backend-focused inventory management system for managing sweets, built using Test-Driven Development (TDD) with Jest to ensure reliability, accurate stock tracking, and robust API behavior.",
     techStack: ["Node.js", "Express.js", "MongoDB", "Jest", "TDD"],
