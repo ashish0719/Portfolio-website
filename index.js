@@ -60,7 +60,7 @@ const allProjects = [
   {
     id: 1,
     title: "Portfolio Website",
-    img: "Assets/Images/portfolio.png",
+    img: "Assets/Images/Portfolio.png",
     description:
       "Built a personal portfolio website with a responsive design to showcase skills, projects, and contact details, focusing on clean UI and frontend practices.",
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -101,7 +101,7 @@ const allProjects = [
   {
     id: 5,
     title: "Quiz App",
-    img: "Assets/Images/quiz.png",
+    img: "Assets/Images/Quiz.png",
     description:
       "Developed an interactive quiz application with multiple-choice questions, score tracking, and dynamic UI updates to enhance user engagement.",
     techStack: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
