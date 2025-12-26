@@ -60,7 +60,7 @@ const allProjects = [
   {
     id: 1,
     title: "Portfolio Website",
-    img: "/Assets/Images/portfolio.png",
+    img: "Assets/Images/portfolio.PNG",
     description:
       "Built a personal portfolio website with a responsive design to showcase skills, projects, and contact details, focusing on clean UI and frontend practices.",
     techStack: ["HTML", "CSS", "JavaScript"],
